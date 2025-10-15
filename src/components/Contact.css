@@ -1,0 +1,242 @@
+:root {
+  --bg-dark: #211111;
+  /* deep maroon from screenshot */
+  --accent-red: #EA2A33;
+  /* button/map border accent */
+  --pale: #FFFFFF;
+  /* pale input background */
+  --input-border: #EA2A33;
+  /* subtle red border */
+  --green: #01ff5e;
+  --text: #fff;
+}
+
+.contact-section {
+  background: var(--bg-dark);
+  color: var(--text);
+  padding: 60px 8%;
+  font-family: 'Inter', sans-serif;
+}
+
+/* two-column grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* left column */
+.contact-form h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.contact-form p {
+  color: var(--text);
+  margin-bottom: 26px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Right H2 */
+.contact-info h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+/* FORM ELEMENTS: pale rounded boxes with red border like screenshot */
+.wpcf7 {
+  max-width: 520px;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 2px solid var(--input-border);
+  background: var(--pale);
+  color: #2a2a2a;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* For the rounded message box height (matching screenshot) */
+.wpcf7 textarea {
+  min-height: 162px;
+  max-height: 220px;
+  resize: none;
+}
+
+/* Placeholder coloring matches subtle text in screenshot */
+.wpcf7 input::placeholder,
+.wpcf7 textarea::placeholder {
+  color: #7f7f7f;
+  font-size: 14px;
+}
+
+/* Submit button: red rounded pill like screenshot */
+.wpcf7 input[type="submit"] {
+  display: inline-block;
+  background: #EA2A33;
+  /* red */
+  color: #1a0b0b;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.wpcf7 input[type="submit"]:hover {
+  background: #faa938;
+}
+
+/* disabled look */
+.wpcf7 input[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* focus state */
+.wpcf7 input:focus,
+.wpcf7 textarea:focus {
+  border-color: #150B0B;
+}
+
+/* errors styling */
+.field-error {
+  color: var(--accent-red);
+  background: #150B0B;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+/* submit feedback */
+.submit-success {
+  margin-top: 12px;
+  color: var(--green);
+  font-weight: 600;
+}
+
+.submit-error {
+  margin-top: 12px;
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+/* Right column info list */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* small round icon background like screenshot */
+.info-list i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #000;
+  color: #faa938;
+  font-size: 12px;
+}
+
+/* info links */
+.info-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.info-list a:hover {
+  color: #faa938;
+}
+
+/* MAP box - pale with red border */
+.map {
+  margin: 10px 0 18px 0;
+  border: 1px solid var(--accent-red);
+  background: #fff6f6;
+}
+
+/* social icons row */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #150B0B;
+  color: #faa938;
+  text-align: center;
+  line-height: 28px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #faa938;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .contact-section {
+    padding: 40px 4%;
+  }
+
+  .contact-form h2 {
+    font-size: 35px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .wpcf7 {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1366px) {
+  .contact-section {
+    padding: 50px 6%;
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+}
