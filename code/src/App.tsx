@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import AboutUs from './components/Aboutus'
 import Classes from './components/Classes'
 import Trainers from './components/Trainers'
+import Facilities from './components/Facilities'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
 
@@ -27,6 +28,10 @@ function App() {
 
       <section id='trainers'>
         <Trainers />
+      </section>
+
+      <section id='facilities'>
+        <Facilities />
       </section>
 
       <section id='contact'>
