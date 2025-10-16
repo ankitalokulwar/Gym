@@ -1,0 +1,152 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: absolute;
+    top: 30%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.hero-content button {
+    background-color: #e53935;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #c62828;
+}
+
+/* Navigation buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #faa938;
+    border: none;
+    font-size: 34px;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 50%;
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* --- Dot Indicators --- */
+.hero-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #faa938;
+    width: 28px;
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-content button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .prev {
+        left: 0px;
+    }
+
+    .next {
+        right: 0px;
+    }
+}
+
+/* iPad devices: Portrait and Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero-section {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
