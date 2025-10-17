@@ -9,6 +9,8 @@ import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
 import BackToTop from './components/Backtotop'
+import PricingPlans from './components/PricingPlans'
+import Testimonials from './components/Testimonials'
 
 function App() {
 
@@ -40,6 +42,8 @@ function App() {
         <Gallery />
       </section>
 
+      <PricingPlans></PricingPlans>
+      <Testimonials></Testimonials>
       <section id='contact'>
         <Contact />
       </section>

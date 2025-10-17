@@ -1,0 +1,319 @@
+/* -------------------- SECTION STYLES -------------------- */
+.testimonials-and-form-section {
+  padding: 60px 0 100px;
+  background-color: #211111;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* -------------------- TESTIMONIALS -------------------- */
+.testimonials-swiper {
+  padding-bottom: 50px;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.testimonial-card {
+  padding: 25px;
+  background-color: #150b0b;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-wrapper {
+  margin-bottom: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  margin: 8px 0 4px;
+}
+
+/* -------------------- WORD-BASED RATING LABEL -------------------- */
+.testimonial-rating-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffc107; /* gold color */
+  background-color: #3a1f1f;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Testimonial Quote */
+.testimonial-quote {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ccc;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Kaisei HarunoUmi";
+  flex-grow: 1;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  background: #4a4a4a !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #ffc107 !important;
+}
+
+/* -------------------- FEEDBACK FORM -------------------- */
+.feedback-form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.feedback-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #2c1d1e;
+  border: 2px solid #4a3e3e;
+  border-radius: 8px;
+  padding: 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* -------------------- INPUTS & TEXTAREA -------------------- */
+.feedback-form input[type="text"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-family: "Kaisei HarunoUmi", sans-serif;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #dd9e70;
+  border-radius: 6px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border-color: #dd7b35;
+  box-shadow: 0 0 6px rgba(221, 158, 112, 0.35);
+}
+
+.feedback-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* -------------------- CUSTOM DROPDOWN -------------------- */
+.rating-dropdown-wrapper {
+  position: relative;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.rating-dropdown-btn {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 2px solid #d4a017;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+}
+
+.rating-dropdown-btn:hover {
+  border-color: #b98d12;
+  background-color: #fdf8f1;
+}
+
+.rating-dropdown-btn.error {
+  border-color: #e63946;
+}
+
+.dropdown-icon {
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.rating-dropdown-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+    box-sizing: border-box;
+
+  z-index: 999;
+}
+
+.rating-dropdown-item {
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  color: #333;
+  font-weight: 500;
+}
+
+.rating-dropdown-item:hover {
+  background-color: #f9f9f9;
+}
+
+.rating-error-text {
+  color: #e63946;
+  font-size: 13px;
+  margin: 5px 0px;
+}
+ .star{
+   font-size: 25px;  /* size of the star */
+  margin-right: 4px;
+}
+
+/* -------------------- ERROR STATES -------------------- */
+.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 6px rgba(220, 53, 69, 0.25) !important;
+}
+
+.invalid-feedback {
+  display: block;   /* ensures it occupies space */
+  min-height: 20px; /* adjust based on font size */
+  line-height: 1;   /* optional for exact spacing */
+  margin-top: 4px;
+}
+
+/* -------------------- SUCCESS MESSAGE -------------------- */
+.success-message {
+  color: #28a745;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* -------------------- BUTTON -------------------- */
+.feedback-form button {
+  background-color: #dd9e70;
+  border: none;
+  color: #fff;
+  padding: 14px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s ease, opacity 0.25s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #dd7b35;
+}
+
+.feedback-form button:disabled {
+  background-color: #d9a886;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  .feedback-form {
+    padding: 25px;
+    max-width: 90%;
+  }
+  .testimonial-card {
+    padding: 20px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback-form {
+    padding: 20px;
+    max-width: 320px;
+  }
+  .testimonial-card {
+    max-width: 100%;
+    height: 400px;
+  }
+}
