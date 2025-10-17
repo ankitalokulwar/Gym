@@ -1,0 +1,240 @@
+.gallery-section {
+  background: #211111;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  
+}
+
+.gallery-title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.gallery-carousel {
+  position: relative;
+  width: 1100px;
+  max-width: 98vw;
+  margin: 0 auto;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img-wrapper {
+  position: absolute;
+  top: 28px;
+  background: #1c1512;
+  overflow: hidden;
+  transform: translateX(-50%);
+  transition: all 0.55s cubic-bezier(.22, 1, .36, 1);
+  user-select: none;
+}
+
+.gallery-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Navigation buttons */
+.nav-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #faa938;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 50%;
+  z-index: 3;
+  transition: background 0.3s ease;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.nav-btn:hover {
+  color: #fff;
+}
+
+/* Modal Popup */
+.gallery-modal {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 13%;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.gallery-modal img.modal-content {
+  max-width: 90%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30%;
+  color: #faa938;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 101;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #EA2A33;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* iPad Air / Medium Tablets (821px–1024px) */
+@media (max-width: 1024px) and (min-width: 821px) {
+  .gallery-carousel {
+    width: 90%;
+  }
+
+  .gallery-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .nav-btn {
+    font-size: 34px;
+    top: 21%;
+    padding: 8px 12px;
+  }
+
+  .prev {
+    left: 0px;
+  }
+
+  .next {
+    right: 0px;
+  }
+
+  .close-btn {
+    top: 6%;
+    right: 6%;
+    font-size: 55px;
+  }
+}
+
+/* iPad Mini / Small Tablets (600px–820px) */
+@media (max-width: 820px) and (min-width: 600px) {
+  .gallery-carousel {
+    width: 90%;
+    height: 540px;
+  }
+
+  /* Keep 3 visible cards on iPad Mini */
+  .gallery-img-wrapper:not(.center):nth-child(4),
+  .gallery-img-wrapper:not(.center):nth-child(6) {
+    display: block;
+    opacity: 0.9;
+    transform: scale(0.85);
+  }
+
+  .gallery-img-wrapper:not(:nth-child(4)):not(:nth-child(5)):not(:nth-child(6)) {
+    display: none;
+  }
+
+  .gallery-title {
+    font-size: 28px;
+  }
+
+  .nav-btn {
+    font-size: 30px;
+    padding: 8px 12px;
+  }
+
+  .prev {
+    left: 30px;
+  }
+
+  .next {
+    right: 30px;
+  }
+
+  .close-btn {
+    top: 6%;
+    right: 6%;
+    font-size: 45px;
+  }
+}
+
+/* Mobile Devices (<600px) */
+@media (max-width: 600px) {
+  .gallery-carousel {
+    width: 100%;
+    height: 520px;
+    overflow: visible;
+  }
+
+  .gallery-img-wrapper {
+    position: relative;
+    top: 0 !important;
+    transform: none !important;
+    width: 85% !important;
+    margin: 0 auto;
+  }
+
+  /* Show only center image */
+  .gallery-img-wrapper:not(.center) {
+    display: none;
+  }
+
+  .gallery-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .nav-btn {
+    font-size: 26px;
+    top: 48%;
+    padding: 6px 12px;
+    z-index: 10;
+  }
+
+  .prev {
+    left: -5px;
+  }
+
+  .next {
+    right: -5px;
+  }
+
+  .gallery-modal {
+    display: none;
+  }
+}
