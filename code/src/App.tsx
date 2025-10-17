@@ -5,8 +5,10 @@ import AboutUs from './components/Aboutus'
 import Classes from './components/Classes'
 import Trainers from './components/Trainers'
 import Facilities from './components/Facilities'
+import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import BackToTop from './components/Backtotop'
 import PricingPlans from './components/PricingPlans'
 import Testimonials from './components/Testimonials'
 
@@ -36,12 +38,17 @@ function App() {
         <Facilities />
       </section>
 
+      <section id='gallery'>
+        <Gallery />
+      </section>
+
       <PricingPlans></PricingPlans>
       <Testimonials></Testimonials>
       <section id='contact'>
         <Contact />
       </section>
 
+      <BackToTop />
       <Footer />
     </>
   )
