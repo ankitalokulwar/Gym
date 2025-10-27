@@ -1,129 +1,111 @@
-import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Header.css';
+import "./Header.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState, useEffect } from "react";
 
-const Header: React.FC = () => {
-    const [expanded, setExpanded] = useState(false);
-    const [activeSection, setActiveSection] = useState<string>('home');
+export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState<string>("home");
 
-    const handleNavClick = () => setExpanded(false);
+    const handleLinkClick = () => {
+        if (menuOpen) setMenuOpen(false);
+    };
 
-    // Detect active section while scrolling
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = document.querySelectorAll<HTMLElement>('section[id]');
-            let current = '';
+        const sections = document.querySelectorAll<HTMLElement>("section[id]");
 
+        const handleScroll = () => {
+            const scrollY = window.scrollY + 150;
             sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 150;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id') || '';
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    setActiveSection(section.id);
                 }
             });
-
-            setActiveSection(current);
         };
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // call once on load
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const navItems = [
+        { label: "About us", id: "about" },
+        { label: "Classes", id: "classes" },
+        { label: "Trainers", id: "trainers" },
+        { label: "Facilities", id: "facilities" },
+        { label: "Gallery", id: "gallery" },
+        { label: "Membership", id: "membership" },
+        { label: "Testimonials", id: "testimonials" },
+    ];
+
     return (
-        <header className="header-section">
-            <Navbar
-                expand="lg"
-                className="navbar-dark"
-                fixed="top"
-                expanded={expanded}
-            >
-                <Container>
+        <header className="custom-header">
+            <nav className="navbar navbar-expand-lg navbar-dark container">
+                <div className="container-fluid px-3 d-flex align-items-center justify-content-between">
                     {/* Logo */}
-                    <Navbar.Brand href="#" className="d-flex align-items-center" onClick={handleNavClick}>
+                    <a className="navbar-brand" href="#home" onClick={handleLinkClick}>
                         <img
                             src="./src/assets/logo.svg"
                             alt="Titan Strength"
                             className="logo-img"
                         />
                         <span className="brand-text">Titan Strength</span>
-                    </Navbar.Brand>
+                    </a>
 
-                    {/* Mobile toggle */}
-                    <Navbar.Toggle
-                        aria-controls="main-navbar"
-                        onClick={() => setExpanded(expanded ? false : true)}
-                    />
+                    {/* Mobile Toggle */}
+                    <button
+                        className="navbar-toggler custom-toggler"
+                        type="button"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                    >
+                        <i className={`bi bi-list ${menuOpen ? "d-none" : ""}`} />
+                        <i className={`bi bi-x ${menuOpen ? "" : "d-none"}`} />
+                    </button>
 
-                    {/* Nav Links */}
-                    <Navbar.Collapse id="main-navbar" className="justify-content-end">
-                        <Nav className="align-items-center">
-                            <Nav.Link
-                                href="#about"
-                                onClick={handleNavClick}
-                                className={activeSection === 'about' ? 'active' : ''}
-                            >
-                                About us
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#classes"
-                                onClick={handleNavClick}
-                                className={activeSection === 'classes' ? 'active' : ''}
-                            >
-                                Classes
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#trainers"
-                                onClick={handleNavClick}
-                                className={activeSection === 'trainers' ? 'active' : ''}
-                            >
-                                Trainers
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#facilities"
-                                onClick={handleNavClick}
-                                className={activeSection === 'facilities' ? 'active' : ''}
-                            >
-                                Facilities
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#gallery"
-                                onClick={handleNavClick}
-                                className={activeSection === 'gallery' ? 'active' : ''}
-                            >
-                                Gallery
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#membership"
-                                onClick={handleNavClick}
-                                className={activeSection === 'membership' ? 'active' : ''}
-                            >
-                                Membership
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#testimonials"
-                                onClick={handleNavClick}
-                                className={activeSection === 'testimonials' ? 'active' : ''}
-                            >
-                                Testimonials
-                            </Nav.Link>
+                    {/* Navigation */}
+                    <div
+                        className={`collapse navbar-collapse justify-content-end ${menuOpen ? "show" : ""
+                            }`}
+                    >
+                        <ul className="navbar-nav align-items-center">
+                            {navItems.map((item) => (
+                                <li className="nav-item" key={item.id}>
+                                    <a
+                                        className={`nav-link ${activeSection === item.id ? "active" : ""
+                                            }`}
+                                        href={`#${item.id}`}
+                                        onClick={handleLinkClick}
+                                    >
+                                        {item.label}
+                                    </a>
+                                </li>
+                            ))}
 
-                            <Button
-                                variant="danger"
-                                className={`contact-btn ${activeSection === 'contact' ? 'active' : ''
-                                    }`}
-                                href="#contact"
-                                onClick={handleNavClick}
-                            >
+                            {/* Contact Button (visible only on mobile) */}
+                            <li className="nav-item d-lg-none mt-2">
+                                <a
+                                    href="#contact"
+                                    className={`btn btn-contact w-100 ${activeSection === "contact" ? "active" : ""
+                                        }`}
+                                    onClick={handleLinkClick}
+                                >
+                                    Contact us
+                                </a>
+                            </li>
+                        </ul>
+
+                        {/* Desktop Contact Button */}
+                        <div className="d-none d-lg-block ms-3">
+                            <a href="#contact" className="btn btn-contact">
                                 Contact us
-                            </Button>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
     );
-};
-
-export default Header;
+}

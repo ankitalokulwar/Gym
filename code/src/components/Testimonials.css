@@ -1,16 +1,10 @@
 /* -------------------- SECTION STYLES -------------------- */
 .testimonials-and-form-section {
-  padding: 60px 0 100px;
+  padding: 40px 0 100px;
   background-color: #211111;
   color: #fff;
   font-family: "Inter", sans-serif;
   overflow: hidden;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 .section-header {

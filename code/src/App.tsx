@@ -18,7 +18,7 @@ function App() {
     <>
       <Header />
 
-      <section id='#'>
+      <section id='home'>
         <Hero />
       </section>
 

@@ -1,6 +1,8 @@
 body {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html {
@@ -8,7 +10,7 @@ html {
 }
 
 section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 85px;
 }
 
 /* Back to top button */
