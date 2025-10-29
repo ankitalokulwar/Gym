@@ -8,15 +8,15 @@ const fadeUp = {
 };
 
 const images = [
-  "./src/assets/gallery/gym8.png",
-  "./src/assets/gallery/gym7.png",
-  "./src/assets/gallery/gym6.png",
-  "./src/assets/gallery/gym5.png",
-  "./src/assets/gallery/center.png",
-  "./src/assets/gallery/gym1.png",
-  "./src/assets/gallery/gym2.png",
-  "./src/assets/gallery/gym3.png",
-  "./src/assets/gallery/gym4.png",
+  "/gallery/gym8.png",
+  "/gallery/gym7.png",
+  "/gallery/gym6.png",
+  "/gallery/gym5.png",
+  "/gallery/center.png",
+  "/gallery/gym1.png",
+  "/gallery/gym2.png",
+  "/gallery/gym3.png",
+  "/gallery/gym4.png",
 ];
 
 const AUTO_SLIDE_INTERVAL = 5000;

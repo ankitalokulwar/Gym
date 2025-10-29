@@ -36,17 +36,17 @@ const AboutUs: React.FC = () => {
                 <div className="features">
                     {[
                         {
-                            icon: "./src/assets/aboutus/trainers.svg",
+                            icon: "/aboutus/trainers.svg",
                             title: "Expert Trainers",
                             text: "Our certified trainers provide personalized guidance and motivation to help you reach your fitness goals.",
                         },
                         {
-                            icon: "./src/assets/aboutus/state.svg",
+                            icon: "/aboutus/state.svg",
                             title: "State-of-the-Art Facilities",
                             text: "Experience the latest in fitness technology and equipment in our modern and spacious facilities.",
                         },
                         {
-                            icon: "./src/assets/aboutus/supportive.svg",
+                            icon: "/aboutus/supportive.svg",
                             title: "Supportive Community",
                             text: "Join a community of like-minded individuals who will support and inspire you on your fitness journey.",
                         },
@@ -172,17 +172,17 @@ const AboutUs: React.FC = () => {
                 <div className="unique-cards">
                     {[
                         {
-                            icon: "./src/assets/aboutus/community.svg",
+                            icon: "/aboutus/community.svg",
                             title: "Community Focus",
                             text: "We're more than just a gym; we're a community of like-minded individuals supporting each other's fitness journeys.",
                         },
                         {
-                            icon: "./src/assets/aboutus/wellness.svg",
+                            icon: "/aboutus/wellness.svg",
                             title: "Wellness Approach",
                             text: "We prioritize your overall well-being, offering resources for both physical and mental health.",
                         },
                         {
-                            icon: "./src/assets/aboutus/expert.svg",
+                            icon: "/aboutus/expert.svg",
                             title: "Expert Guidance",
                             text: "Our certified trainers provide personalized guidance and support to help you achieve your goals.",
                         },
