@@ -12,22 +12,22 @@ const Trainers: React.FC = () => {
     {
     name: 'Raj Mishra',
     specialization: 'Strength Training',
-    image: './src/assets/trainers/raj.svg',
+    image: '/trainers/raj.svg',
   },
   {
     name: 'Neha Sharma',
     specialization: 'Yoga & Flexibility',
-    image: './src/assets/trainers/neha.svg',
+    image: '/trainers/neha.svg',
   },
   {
     name: 'Rhul Mehara',
     specialization: 'Cardio & Endurance',
-    image: './src/assets/trainers/rahul.svg',
+    image: '/trainers/rahul.svg',
   },
   {
     name: 'Prachi Gupta',
     specialization: 'Nutrition & Wellness',
-    image: './src/assets/trainers/prachi.svg',
+    image: '/trainers/prachi.svg',
   },
   ];
 

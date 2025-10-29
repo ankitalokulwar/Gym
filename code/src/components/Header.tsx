@@ -48,7 +48,7 @@ export default function Header() {
                     {/* Logo */}
                     <a className="navbar-brand" href="#home" onClick={handleLinkClick}>
                         <img
-                            src="./src/assets/logo.svg"
+                            src="/logo.svg"
                             alt="Titan Strength"
                             className="logo-img"
                         />

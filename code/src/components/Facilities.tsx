@@ -9,22 +9,22 @@ const fadeUp = {
 
 const facilities = [
     {
-        imgSrc: './src/assets/facilities/cardio.svg',
+        imgSrc: '/facilities/cardio.svg',
         title: 'Cardio Zone',
         description: 'State-of-the-art treadmills, ellipticals, and bikes.',
     },
     {
-        imgSrc: './src/assets/facilities/strenght.svg',
+        imgSrc: '/facilities/strenght.svg',
         title: 'Strength Training',
         description: 'Comprehensive free weights and machine selection.',
     },
     {
-        imgSrc: './src/assets/facilities/group.svg',
+        imgSrc: '/facilities/group.svg',
         title: 'Group Fitness Studio',
         description: 'Spacious studio for yoga, pilates, and more.',
     },
     {
-        imgSrc: './src/assets/facilities/recovery.svg',
+        imgSrc: '/facilities/recovery.svg',
         title: 'Recovery Area',
         description: 'Dedicated space for stretching and relaxation.',
     },

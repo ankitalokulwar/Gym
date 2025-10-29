@@ -39,17 +39,17 @@ const Classes: React.FC = () => {
           <div className="group-grid">
             {[
               {
-                img: "./src/assets/classes/HIIT.svg",
+                img: "/classes/HIIT.svg",
                 title: "High-Intensity Interval Training (HIIT)",
                 text: "Push your limits with our high-energy HIIT classes, designed to maximize calorie burn and build strength.",
               },
               {
-                img: "./src/assets/classes/yoga.svg",
+                img: "/classes/yoga.svg",
                 title: "Yoga & Mindfulness",
                 text: "Find your inner peace and improve flexibility with our calming yoga sessions.",
               },
               {
-                img: "./src/assets/classes/spin.svg",
+                img: "/classes/spin.svg",
                 title: "Spin & Cycle",
                 text: "Experience the thrill of indoor cycling with our motivating spin classes.",
               },
@@ -110,7 +110,7 @@ const Classes: React.FC = () => {
               transition={{ delay: 0.2 }}
             >
               <img
-                src="./src/assets/classes/personaltraining.svg"
+                src="/classes/personaltraining.svg"
                 alt="Personal Training"
               />
             </motion.div>
@@ -129,17 +129,17 @@ const Classes: React.FC = () => {
           <div className="programs-grid">
             {[
               {
-                img: "./src/assets/classes/weight.svg",
+                img: "/classes/weight.svg",
                 title: "Weight Management",
                 text: "Our comprehensive program combines exercise, nutrition, and support to help you reach your ideal weight.",
               },
               {
-                img: "./src/assets/classes/strenght.svg",
+                img: "/classes/strenght.svg",
                 title: "Strength & Conditioning",
                 text: "Build muscle and increase your overall strength with our tailored strength training program.",
               },
               {
-                img: "./src/assets/classes/atheletic.svg",
+                img: "/classes/atheletic.svg",
                 title: "Athletic Performance",
                 text: "Enhance your athletic abilities with our specialized conditioning program for athletes of all levels.",
               },
